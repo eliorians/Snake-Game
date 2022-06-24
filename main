@@ -1,0 +1,37 @@
+from random import random
+import turtle
+
+#screen
+screen = turtle.Screen()
+screen.title("Snake Snacks")
+screen.bgcolor("black")
+screen.setup(width=1200, height= 800)
+
+#key binding
+screen.listen()
+screen.onkeypress(snakeLeft, "q")
+screen.onkeypress(snakeRight, "e")
+
+#snake
+snake = turtle.Turtle()
+snake.goto(0,0)
+snake.speed(0)
+snake.penup()
+snake.shape("circle")
+snake.color("green")
+snake.shapesize(stretch_len=2)
+
+#snacks
+snacks = turtle.Turtle()
+snacks.speed(0)
+snacks.goto(100, 100)
+snacks.color("red")
+snacks.shape("square")
+
+#Main Game Loo[]
+while True:
+    screen.update()
+
+    #snake moves forward
+    snake.setx(ball.xcor()+ball.dx)
+    snake.sety(ball.ycor()+ball.dy)
